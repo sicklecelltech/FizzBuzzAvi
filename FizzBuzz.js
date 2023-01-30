@@ -5,26 +5,30 @@
     • if the number is divisible by both 3 and 5, the number should be replaced with "FizzBuzz" */
 
     function FizzBuzz(n){
-        let ans=[];
-        let ansS="";
+        //for formatting starting the array with 1 as it will not trigger fizz or buzz
+        let ansArray=[1,];
+        let ansString="";
         
-        for ( let i =1; i <= n; i++){
+        for ( let i =2; i <= n; i++){
              //test for fizzbuzz
             if (i%3 == 0 && i%5 == 0){
-                ans.push("FizzBuzz ")
+                ansArray.push(" FizzBuzz")
+
             //test for fizz
             }else if(i%3 == 0){
-                ans.push("Fizz ")
-            }else if (i%5 == 0){
+                ansArray.push(" Fizz")
+
             //test for buzz
-            ans.push("Buzz ")} 
-            else {            
+            }else if (i%5 == 0){
+            ansArray.push(" Buzz")} 
+            else {
+                            
             // populate array
-            ans.push(i);
+            ansArray.push(` ${i}`);
             }
         }
-        ansS=ans.toString();
-        console.log(ansS)
+        ansString=ansArray.toString();
+        console.log(ansString)
     }
     //test fizz
     console.log("testing for Fizz")
