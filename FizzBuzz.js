@@ -6,24 +6,25 @@
 
     function FizzBuzz(n){
         let ans=[];
+        let ansS="";
         
         for ( let i =1; i <= n; i++){
              //test for fizzbuzz
             if (i%3 == 0 && i%5 == 0){
-                ans.push("FizzBuzz")
+                ans.push("FizzBuzz ")
             //test for fizz
             }else if(i%3 == 0){
-                ans.push("Fizz")
+                ans.push("Fizz ")
             }else if (i%5 == 0){
             //test for buzz
-            ans.push("Buzz")} 
+            ans.push("Buzz ")} 
             else {            
             // populate array
             ans.push(i);
             }
         }
-        
-        console.log(ans)
+        ansS=ans.toString();
+        console.log(ansS)
     }
     //test fizz
     console.log("testing for Fizz")
